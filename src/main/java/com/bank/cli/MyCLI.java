@@ -1,9 +1,12 @@
 package com.bank.cli;
 
-import com.bank.services.AccountService;
-
 import java.util.Scanner;
 
+import org.springframework.stereotype.Component;
+
+import com.bank.services.AccountService;
+
+@Component
 public class MyCLI {
     private final AccountService accountService;
     private final Scanner scanner;
@@ -88,7 +91,7 @@ public class MyCLI {
         System.out.println(result ? "Transfer successful" : "Failed to transfer");
     }
 
-    private void printMenu() {
+    public void printMenu() {
         System.out.println("Enter operation number:");
         System.out.println("1 - show accounts");
         System.out.println("2 - create account");

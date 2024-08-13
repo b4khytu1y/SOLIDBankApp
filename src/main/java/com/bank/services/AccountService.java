@@ -1,13 +1,15 @@
 package com.bank.services;
 
-import com.bank.models.Account; 
+import org.springframework.stereotype.Service;
+
+import com.bank.dao.AccountDAO;
+import com.bank.models.Account;
 import com.bank.models.AccountType;
 import com.bank.models.CheckingAccount;
 import com.bank.models.FixedAccount;
 import com.bank.models.SavingAccount;
-import com.bank.dao.AccountDAO; 
 
-
+@Service
 public class AccountService {
     private final AccountDAO accountDAO;
     private int accountIdCounter = 1;
