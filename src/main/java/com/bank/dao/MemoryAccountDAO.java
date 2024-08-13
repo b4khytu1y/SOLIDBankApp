@@ -1,6 +1,7 @@
 package com.bank.dao;
 
-import com.bank.models.Account; 
+import com.bank.models.Account;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,5 +16,13 @@ public class MemoryAccountDAO implements AccountDAO {
     @Override
     public List<Account> getAllAccounts() {
         return new ArrayList<>(accounts);
+    }
+
+    @Override
+    public Account getAccountById(String accountId) {
+        return accounts.stream()
+                       .filter(account -> account.getAccountId().equals(accountId))
+                       .findFirst()
+                       .orElse(null);
     }
 }

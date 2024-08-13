@@ -35,4 +35,33 @@ public class AccountService {
     public void showAccounts() {
         accountDAO.getAllAccounts().forEach(System.out::println);
     }
+
+    public boolean deposit(String accountId, double amount) {
+        Account account = accountDAO.getAccountById(accountId);
+        if (account != null && amount > 0) {
+            account.setBalance(account.getBalance() + amount);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean withdraw(String accountId, double amount) {
+        Account account = accountDAO.getAccountById(accountId);
+        if (account != null && amount > 0 && account.getBalance() >= amount) {
+            account.setBalance(account.getBalance() - amount);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean transfer(String sourceAccountId, String destinationAccountId, double amount) {
+        Account sourceAccount = accountDAO.getAccountById(sourceAccountId);
+        Account destinationAccount = accountDAO.getAccountById(destinationAccountId);
+        if (sourceAccount != null && destinationAccount != null && amount > 0 && sourceAccount.getBalance() >= amount) {
+            sourceAccount.setBalance(sourceAccount.getBalance() - amount);
+            destinationAccount.setBalance(destinationAccount.getBalance() + amount);
+            return true;
+        }
+        return false;
+    }
 }
