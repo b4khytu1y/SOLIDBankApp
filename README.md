@@ -22,9 +22,10 @@
  </div>
  </ul>
  <div>
+
   <p><b>Ниже вы можете ознакомиться со скрином рабочей программы (рис 2).</b></p>
   <p align="center">
-<img  src="https://github.com/user-attachments/assets/fab7a445-3caf-4c51-8f41-5fa64887aed8" width="500"/>
+<img  src="[https://github.com/user-attachments/assets/fab7a445-3caf-4c51-8f41-5fa64887aed8](https://github.com/user-attachments/assets/d6843beb-92bb-40e9-9a93-5ea4f37d7c4a)" width="500"/>
 </p>
   <p align="center">Рисунок 2. Демонстрация работы в консоли</p>
  </div>
