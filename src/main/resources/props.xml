@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="accountDAO" class="com.bank.dao.MemoryAccountDAO"/>
+    <bean id="accountService" class="com.bank.services.AccountService">
+        <constructor-arg ref="accountDAO"/>
+    </bean>
+    <bean id="cli" class="com.bank.cli.MyCLI">
+        <constructor-arg ref="accountService"/>
+    </bean>
+
+</beans>
