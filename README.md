@@ -24,7 +24,9 @@
  <div>
   <p><b>Ниже вы можете ознакомиться со скрином рабочей программы (рис 2).</b></p>
   <p align="center">
-<img  src="https://github.com/user-attachments/assets/79d1be3b-1669-4b45-a1e7-efc432e4c3c6" width="500"/>
+<img  src="https://github.com/user-attachments/assets/fab7a445-3caf-4c51-8f41-5fa64887aed8" width="500"/>
 </p>
   <p align="center">Рисунок 2. Демонстрация работы в консоли</p>
  </div>
+
+
