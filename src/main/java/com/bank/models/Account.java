@@ -1,16 +1,18 @@
 package com.bank.models;
 
-public class Account {
-    private final AccountType accountType;
-    private final String accountId;
-    private final String clientId;
-    private double balance;
+public abstract class Account {
+    protected AccountType accountType;
+    protected String clientId;
+    protected String accountId;
+    protected double balance;
+    protected boolean withdrawAllowed;
 
-    public Account(AccountType accountType, String accountId, String clientId) {
+    public Account(AccountType accountType, String clientId, String accountId, double balance, boolean withdrawAllowed) {
         this.accountType = accountType;
-        this.accountId = accountId;
         this.clientId = clientId;
-        this.balance = 0.0;
+        this.accountId = accountId;
+        this.balance = balance;
+        this.withdrawAllowed = withdrawAllowed;
     }
 
     public String getAccountId() {
@@ -20,11 +22,14 @@ public class Account {
     public double getBalance() {
         return balance;
     }
-
+    public void setClientId(String clientId){
+        this.clientId = clientId;
+    }
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
+    public abstract void deposit(double amount);
+    public abstract void withdraw(double amount);
     @Override
     public String toString() {
         return "Account{" +
@@ -33,4 +38,6 @@ public class Account {
                 ", balance=" + balance +
                 '}';
     }
+
+    
 }

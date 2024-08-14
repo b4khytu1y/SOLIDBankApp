@@ -1,11 +1,15 @@
 package com.bank.dao;
 
-import com.bank.models.Account;
-
 import java.util.List;
 
+import com.bank.models.Account;
+
 public interface AccountDAO {
+    Account getAccount(String accounId);
+    void saveAccount(Account account);
+    void deleteAccount(String accounId);
     void addAccount(Account account);
-    List<Account> getAllAccounts();
-    Account getAccountById(String accountId);
+    List<Account> getAllAccount();
 }
+
+
