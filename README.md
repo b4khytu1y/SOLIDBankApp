@@ -27,9 +27,6 @@ Bank App JWT - это REST API приложение на основе Spring Boo
 
 
 
-Документация находится в Swagger после запуска приложения:
-http://localhost:8080/swagger-ui/index.html
-
 ## Требования
 
 - Java 17
