@@ -1,5 +1,7 @@
 package com.bank.models;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
+
 public class Account {
     private final AccountType accountType;
     private final String accountId;
@@ -32,5 +34,10 @@ public class Account {
                 ", clientID='" + clientId + '\'' +
                 ", balance=" + balance +
                 '}';
+    }
+
+    public DeleteMapping getAccountType() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAccountType'");
     }
 }

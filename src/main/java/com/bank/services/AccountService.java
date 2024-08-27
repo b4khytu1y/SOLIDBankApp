@@ -66,4 +66,20 @@ public class AccountService {
         }
         return false;
     }
+
+    public Account getAccountById(String id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAccountById'");
+    }
+
+    public boolean updateAccount(String id, Account account) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'updateAccount'");
+    }
+
+    public void deleteAccount(String id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteAccount'");
+    }
+    
 }
