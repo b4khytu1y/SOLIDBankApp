@@ -1,50 +1,40 @@
 package com.bank.model;
 
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Entity;
+
+@Entity
 public class Account {
-    private Long id;
-    private String accountNumber;
+
+    @Id
+    private String id;
     private String clientId;
-    private Double balance;
-
-    public Account() {}
-
-    public Account(String accountNumber, String clientId, Double balance) {
-        this.accountNumber = accountNumber;
-        this.clientId = clientId;
-        this.balance = balance;
-    }
-
-    public Long getId() {
+    private double balance;
+    public String getId() {
         return id;
     }
-
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
     public String getClientId() {
         return clientId;
     }
-
     public void setClientId(String clientId) {
         this.clientId = clientId;
     }
-
-    public Double getBalance() {
+    public double getBalance() {
         return balance;
     }
-
-    public void setBalance(Double balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
-
-    // Getters and Setters
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id='" + id + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }

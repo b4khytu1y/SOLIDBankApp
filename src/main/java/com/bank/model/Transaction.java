@@ -1,50 +1,41 @@
 package com.bank.model;
 
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Entity;
+
+@Entity
 public class Transaction {
-    private Long id;
-    private Long accountId;
-    private Double amount;
-    private String transactionType;
 
-    public Transaction() {}
-
-    public Transaction(Long accountId, Double amount, String transactionType) {
-        this.accountId = accountId;
-        this.amount = amount;
-        this.transactionType = transactionType;
-    }
-
-    public Long getId() {
+    @Id
+    private String id;
+    private String accountId;
+    private double amount;
+    public String getId() {
         return id;
     }
-
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
-
-    public Long getAccountId() {
+    public String getAccountId() {
         return accountId;
     }
-
-    public void setAccountId(Long accountId) {
+    public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
-
-    public Double getAmount() {
+    public double getAmount() {
         return amount;
     }
-
-    public void setAmount(Double amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
-    public String getTransactionType() {
-        return transactionType;
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "id='" + id + '\'' +
+                ", accountId='" + accountId + '\'' +
+                ", amount=" + amount +
+                '}';
     }
-
-    public void setTransactionType(String transactionType) {
-        this.transactionType = transactionType;
-    }
-
-    // Getters and Setters
 }
